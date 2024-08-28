@@ -6,10 +6,10 @@ const app = express();
 
 app.use(express.json());
 
-// Rota para utilitário de números
+
 app.get('/util/number/:action', (req, res) => {
   const { action } = req.params;
-  const input = req.query.input.split(',').map(Number); // Converte strings para números
+  const input = req.query.input.split(',').map(Number); 
 
   if (action !== 'minimum' && action !== 'maximum') {
     return res.status(400).send({ error: 'Ação inválida para números' });
@@ -24,7 +24,7 @@ app.get('/util/number/:action', (req, res) => {
   res.status(200).send(result);
 });
 
-// Rota para utilitário de texto
+
 app.post('/util/text/:action', (req, res) => {
   const { action } = req.params;
   const { input } = req.body;
