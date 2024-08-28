@@ -43,5 +43,5 @@ app.post('/util/text/:action', (req, res) => {
 });
 
 app.listen(3000, () => {
-  console.log('App listening at http://localhost:3000');
+  console.log('Ouvindo em http://localhost:3000');
 });
